@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores para Formulários</title>
+    <script src="app.js"></script>
+    <script src="property.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <form onsubmit="app.addProperty()">
+        <p>
+            <label>Tipo do imóvel</label>
+            <Select name="property-type">
+                <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+            </Select>
+        </p>
+        <p>
+            <label>Área do imóvel (m²):</label>
+            <input type="text" name="area" id="area" min="0">
+        </p>
+        <p>
+            <input type="checkbox" name="is-rented"> Alugado
+        </p>
+        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="app.clearForm()">Limpar</button>
+    </form>
+    <br>
+    <hr>
+    <h3>Imóveis cadastrados</h3>
+    <ul id="property-list"></ul>
+</body>
+</html>
